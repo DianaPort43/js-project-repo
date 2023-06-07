@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="/style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+          <h2 id="resultMessage"></h2>
+          <button id="restartButton">Restart</button>
+        </div>
+    </div>
+    <header class="header">
+      <h1 class="title">ROCK SCISSORS PAPER</h1>
+    </header>
+    <main class="main">
+      <div class="text">
+        <h2 class="score-info" id="scoreInfo">Choose your weapon</h2>
+        <h3 class="score-message" id="scoreMessage">First to score 5 points wins the game</h3>
+      </div>
+        <div class="row">
+          <div class="buttons-comp">
+            <button class="btn" id="rockBtn">
+              <div class="sign">✊</div>
+            </button>
+            <button class="btn" id="paperBtn">
+              <div class="sign">✋</div>
+            </button>
+            <button class="btn" id="scissorsBtn">
+              <div class="sign">✌</div>
+            </button>
+          </div>
+
+          <div class="scores-container">
+            <div class="score-box">
+              <div class="sign" id="computerSign">❔</div>
+              <p class="score" id="computerScore">Computer: 0</p>
+            </div>
+            <div class="score-box">
+                <div class="sign" id="playerSign">❔</div>
+                <p class="score" id="playerScore">Player: 0</p>
+              </div>
+          </div>
+
+
+        <div class="buttons-player">
+            <button onclick="selectChoice(0)" class="btn-play" id="rockBtn">
+              <div class="sign">✊</div>
+            </button>
+            <button onclick="selectChoice(1)" class="btn-play" id="paperBtn">
+              <div class="sign">✋</div>
+            </button>
+            <button onclick="selectChoice(2)" class="btn-play" id="scissorsBtn">
+              <div class="sign">✌</div>
+            </button>
+          </div>
+        </div>
+    </main>
+    <footer>
+        <div class="foldable-section">
+            <div class="foldable-header">
+              <h2>LEARN THE RULES</h2>
+              <button class="fold-button"></button>
+            </div>
+            <div class="foldable-content">
+              <p>Scissors cut paper. Paper wraps stone. The rock crushes the lizard and the lizard poisons Spock while Spock breaks the scissors, which in turn cuts off the lizard's head, which eats the paper containing the evidence against Spock. Spock vaporizes the stone, and the stone, of course, dulls the scissors.</p>
+            </div>
+        </div>
+    </footer>
+      
+    <script src="script.js"></script>
+      
+</body>
+</html>
