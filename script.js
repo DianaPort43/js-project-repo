@@ -99,5 +99,18 @@ function addToHistory(result) {
   gameHistory.appendChild(li);
 }
 
+//RULES
+
+document.addEventListener('DOMContentLoaded', function() {
+    var foldButtons = document.querySelectorAll('.fold-button');
+    
+    for (var i = 0; i < foldButtons.length; i++) {
+      foldButtons[i].addEventListener('click', function() {
+        var foldableSection = this.closest('.foldable-section');
+        foldableSection.classList.toggle('folded');
+      });
+    }
+  });
+
 
 
